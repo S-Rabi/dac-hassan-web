@@ -40,6 +40,10 @@ const sendMail = async (mailOptions) => {
   }
 };
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the email sending service");
+});
+
 app.post("/sendEmail", async (req, res) => {
   try {
     const attachments = req.body.attachments || [];
