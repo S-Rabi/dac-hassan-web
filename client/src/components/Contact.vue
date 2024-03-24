@@ -46,7 +46,7 @@ const processFiles = async () => {
 const performEmailSend = async () => {
   try {
     const response = await axios.post(
-      "http://localhost:3000/sendEmail",
+      "http://localhost:3001/sendEmail",
       emailData.value
     );
     console.log("response data =>", response.data);
