@@ -23,37 +23,39 @@ window.addEventListener("resize", () => {
 });
 </script>
 <template>
-  <div class="container">
-    <div class="navbar">
-      <router-link to="/" class="logo">
-        <img src="../assets/dac-logo.jpg" alt="" />
-      </router-link>
-      <div class="nav-link" v-show="!isMobile || (!menuOpen && !isMobile)">
-        <router-link to="/" class="navlink">Home</router-link>
-        <router-link to="/service" class="navlink">Service</router-link>
-        <router-link to="/aboutUs" class="navlink">About Us</router-link>
-        <router-link to="/contact" class="navlink">Contact</router-link>
+  <div class="navbar-wrapper">
+    <div class="container">
+      <div class="navbar">
+        <router-link to="/" class="logo">
+          <img src="../assets/dac-logo.jpg" alt="" />
+        </router-link>
+        <div class="nav-link" v-show="!isMobile || (!menuOpen && !isMobile)">
+          <router-link to="/" class="navlink">Home</router-link>
+          <router-link to="/service" class="navlink">Service</router-link>
+          <router-link to="/aboutUs" class="navlink">About Us</router-link>
+          <router-link to="/contact" class="navlink">Contact</router-link>
+        </div>
+        <div
+          class="menu-icon"
+          @click="toggleMenu"
+          :class="{ open: isOpen }"
+          v-show="isMobile"
+        >
+          <div class="line-menu half start"></div>
+          <div class="line-menu"></div>
+          <div class="line-menu half end"></div>
+        </div>
       </div>
-      <div
-        class="menu-icon"
-        @click="toggleMenu"
-        :class="{ open: isOpen }"
-        v-show="isMobile"
-      >
-        <div class="line-menu half start"></div>
-        <div class="line-menu"></div>
-        <div class="line-menu half end"></div>
+      <div class="dropdown" :class="{ 'dropdown-after': menuOpen && isMobile }">
+        <router-link to="/" @click="closeMenu"> Home</router-link>
+        <router-link to="/service" @click="closeMenu">Service</router-link>
+        <router-link to="/aboutUs" @click="closeMenu">About Us</router-link>
+        <router-link to="/contact" @click="closeMenu">Contact</router-link>
       </div>
     </div>
-    <div class="dropdown" :class="{ 'dropdown-after': menuOpen && isMobile }">
-      <router-link to="/" @click="closeMenu"> Home</router-link>
-      <router-link to="/service" @click="closeMenu">Service</router-link>
-      <router-link to="/aboutUs" @click="closeMenu">About Us</router-link>
-      <router-link to="/contact" @click="closeMenu">Contact</router-link>
-    </div>
+    <router-view></router-view>
+    <WhatsAppIcon />
   </div>
-  <router-view></router-view>
-  <WhatsAppIcon />
 </template>
 
 <style scoped>

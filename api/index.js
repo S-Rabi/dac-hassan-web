@@ -39,10 +39,14 @@ const sendMail = async (mailOptions) => {
     return false;
   }
 };
+app.use(express.static(path.join(__dirname, "src")));
 
-app.get("/", (req, res) => {
-  res.send("Welcome to the email sending service");
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "src", "index.html"));
 });
+// app.get("/", (req, res) => {
+//   res.send("Welcome to the email sending service");
+// });
 
 app.post("/sendEmail", async (req, res) => {
   try {
