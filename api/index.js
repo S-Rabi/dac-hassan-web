@@ -197,9 +197,14 @@ const sendMail = async (mailOptions) => {
   }
 };
 
+// Use import.meta.url to get the current file's URL
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+
+// Serve static files from the 'dist' directory
 app.use(express.static(path.join(__dirname, "../client/dist")));
 
 app.get("/", (req, res) => {
+  // Send the main index.html file from the 'dist' directory
   res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
 });
 
