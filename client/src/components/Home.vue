@@ -6,30 +6,32 @@ import Contact from "./Contact.vue";
 </script>
 
 <template>
-  <div class="home-container">
-    <div class="home-desc">
-      <h1 class="title waviy">
-        <span style="--i: 1">D</span>
-        <span style="--i: 2">a</span>
-        <span style="--i: 3">n</span>
-        <span style="--i: 4">d</span>
-        <span style="--i: 5">e</span>
-        <span style="--i: 6">n</span>
-        <span style="--i: 7">o</span>
-        <span style="--i: 8">n</span>
-        <span style="--i: 9">g</span> Automotive Centre
-      </h1>
-      <p class="text-desc">
-        Lorem ipsum dolor sit amet consectetur adipisicing <br />
-        elit. Ratione cumque aliquam aperiam id earum.
-      </p>
-      <router-link to="/contact"> <button>Contact Us</button> </router-link>
+  <div class="home-wrapper">
+    <div class="home-container">
+      <div class="home-desc">
+        <h1 class="title waviy">
+          <span style="--i: 1">D</span>
+          <span style="--i: 2">a</span>
+          <span style="--i: 3">n</span>
+          <span style="--i: 4">d</span>
+          <span style="--i: 5">e</span>
+          <span style="--i: 6">n</span>
+          <span style="--i: 7">o</span>
+          <span style="--i: 8">n</span>
+          <span style="--i: 9">g</span> Automotive Centre
+        </h1>
+        <p class="text-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing <br />
+          elit. Ratione cumque aliquam aperiam id earum.
+        </p>
+        <router-link to="/contact"> <button>Contact Us</button> </router-link>
+      </div>
     </div>
+    <Slider />
+    <Service />
+    <AboutUs />
+    <Contact />
   </div>
-  <Slider />
-  <Service />
-  <AboutUs />
-  <Contact />
 </template>
 
 <style scoped>
