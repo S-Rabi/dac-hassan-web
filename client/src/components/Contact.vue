@@ -48,7 +48,7 @@ const performEmailSend = async () => {
     const response = await axios.post(
       // "http://localhost:3001/sendEmail",
       // "https://dac-last-server.vercel.app/sendEmail",
-      "https://dac-hassan-web-server.vercel.app/",
+      "https://dac-hassan-web-server.vercel.app/sendEmail",
       emailData.value
     );
     console.log("response data =>", response.data);
