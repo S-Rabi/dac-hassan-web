@@ -6,7 +6,7 @@ import axios from "axios";
 const emailFormRef = ref(null);
 
 const emailData = ref({
-  to: "rabi.sanaye@yahoo.com",
+  to: "dac.au@yahoo.com",
   subject: "",
   text: "",
   attachments: [],
