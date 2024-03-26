@@ -3,8 +3,9 @@
     <div class="service-desc">
       <h2 class="service-title">Our services</h2>
       <p class="service-details">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br />
-        Quisquam beatae deleniti exercitationem evedt Shakila.
+        DAC Automotive Centre offers expert bumper repairs, dent removals, panel
+        beating, <br />
+        and more, ensuring your vehicle receives top-notch care and restoration.
       </p>
     </div>
     <br />
@@ -164,5 +165,18 @@ onMounted(() => {
 
 .card:hover::before {
   opacity: 1;
+}
+@media only screen and (max-width: 580px) {
+  .service-details {
+    font-size: 13px;
+    flex: 1;
+    /* background: #84bd3a; */
+    padding: 5px;
+  }
+  .service-title {
+    padding: 10px;
+    font-size: 15px;
+    flex: 1;
+  }
 }
 </style>
