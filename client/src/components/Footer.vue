@@ -3,7 +3,7 @@ import { onMounted, ref } from "vue";
 import { database } from "../data/database";
 
 const PHONENUMBER = "0387538380";
-const email = "dac.au@yhoo.com";
+const email = "dac.au@yahoo.com";
 const locationName = "Dandenong Automotive Centre";
 
 const phoneLink = `tel:${PHONENUMBER}`;
@@ -42,7 +42,7 @@ onMounted(() => {
   <div class="footer">
     <div class="top">
       <div class="text">
-        <h3>logo DAC</h3>
+        <h3>DAC</h3>
         <p>
           DAC Panel Service performs panel beating and smash repairs to bring
           cars back to pre-accident condition. Visit one of our Victorian
