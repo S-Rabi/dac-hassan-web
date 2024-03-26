@@ -24,60 +24,64 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div class="contact">
-    <div class="c-info">
-      <a :href="phoneLink">
-        <i class="fa-solid fa-phone"></i> {{ PHONENUMBER }}</a
-      >
-    </div>
-    <div class="c-info">
-      <a :href="emailLink"><i class="fa-solid fa-envelope"></i> {{ email }}</a>
-    </div>
-    <div class="c-info">
-      <a :href="googleMapsLink" target="_blank"
-        ><i class="fa-solid fa-location-dot"></i> {{ locationName }}</a
-      >
-    </div>
-  </div>
-  <div class="footer">
-    <div class="top">
-      <div class="text">
-        <h3>DAC</h3>
-        <p>
-          DAC Panel Service performs panel beating and smash repairs to bring
-          cars back to pre-accident condition. Visit one of our Victorian
-          locations.
-        </p>
+  <div class="footer-wrapper">
+    <div class="contact">
+      <div class="c-info">
+        <a :href="phoneLink">
+          <i class="fa-solid fa-phone"></i> {{ PHONENUMBER }}</a
+        >
       </div>
-      <div class="text">
-        <h3>Our Services</h3>
-        <div class="map-title" v-for="sec in data" :key="sec.id">
-          <p>{{ sec.title }}</p>
+      <div class="c-info">
+        <a :href="emailLink"
+          ><i class="fa-solid fa-envelope"></i> {{ email }}</a
+        >
+      </div>
+      <div class="c-info">
+        <a :href="googleMapsLink" target="_blank"
+          ><i class="fa-solid fa-location-dot"></i> {{ locationName }}</a
+        >
+      </div>
+    </div>
+    <div class="footer">
+      <div class="top">
+        <div class="text">
+          <h3>DAC</h3>
+          <p>
+            DAC Panel Service performs panel beating and smash repairs to bring
+            cars back to pre-accident condition. Visit one of our Victorian
+            locations.
+          </p>
+        </div>
+        <div class="text">
+          <h3>Our Services</h3>
+          <div class="map-title" v-for="sec in data" :key="sec.id">
+            <p>{{ sec.title }}</p>
+          </div>
+        </div>
+        <div class="text">
+          <h3>Services Hours</h3>
+          <p>Monday – Friday: 8 am – 5 pm</p>
+          <p>Saturday-Sunday: BY APPOINTMENT</p>
         </div>
       </div>
-      <div class="text">
-        <h3>Services Hours</h3>
-        <p>Monday – Friday: 8 am – 5 pm</p>
-        <p>Saturday-Sunday: BY APPOINTMENT</p>
-      </div>
-    </div>
 
-    <div class="wrapper">
-      <div class="bottom">
-        <p class="text text-footer">Copyright © 2024 All rights reserved.</p>
-        <div class="text social">
-          <a href="#">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="#">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-          <a href="#">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a href="#">
-            <i class="fa-brands fa-tiktok"></i>
-          </a>
+      <div class="wrapper">
+        <div class="bottom">
+          <p class="text text-footer">Copyright © 2024 All rights reserved.</p>
+          <div class="text social">
+            <a href="#">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
