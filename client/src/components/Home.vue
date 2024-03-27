@@ -21,10 +21,12 @@ import Contact from "./Contact.vue";
           <span style="--i: 9">g</span> Automotive Centre
         </h1>
         <p class="text-desc">
-          DAC Automotive Centre offers expert bumper repairs, dent removals,
-          panel beating, <br />
-          and more, ensuring your vehicle receives top-notch care and
-          restoration.
+          DAC Automotive Centre specializes in expert bumper repairs, dent
+          removals, <br />
+          panel beating, and a range of other services, ensuring that your
+          vehicle
+          <br />
+          receives top-notch care and restoration.
         </p>
         <router-link to="/contact"> <button>Contact Us</button> </router-link>
       </div>

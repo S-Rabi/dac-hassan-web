@@ -1,11 +1,33 @@
+<script setup>
+import { onMounted, ref } from "vue";
+import { database } from "../data/database";
+import { useMeta } from "vue-meta";
+const data = ref([]);
+
+const fetchData = () => {
+  try {
+    data.value = database;
+  } catch (error) {
+    console.log("Error fetching data", error);
+  }
+};
+onMounted(() => {
+  fetchData();
+});
+
+useMeta(() => {
+  return {
+    title: route.params.title || "Our services",
+  };
+});
+</script>
 <template>
   <div class="service">
     <div class="service-desc">
       <h2 class="service-title">Our services</h2>
       <p class="service-details">
-        DAC Automotive Centre offers expert bumper repairs, dent removals, panel
-        beating, <br />
-        and more, ensuring your vehicle receives top-notch care and restoration.
+        DAC offers expert bumper repairs, dent removals, panel beating, and
+        more, ensuring your vehicle receives top-notch care and restoration.
       </p>
     </div>
     <br />
@@ -26,25 +48,6 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import { onMounted, ref } from "vue";
-import { database } from "../data/database";
-
-const data = ref([]);
-
-const fetchData = () => {
-  try {
-    data.value = database;
-  } catch (error) {
-    console.log("Error fetching data", error);
-  }
-};
-onMounted(() => {
-  fetchData();
-});
-</script>
-
 <style scoped>
 .service {
   width: 100%;
