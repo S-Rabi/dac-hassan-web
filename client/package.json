@@ -15,10 +15,9 @@
     "leaflet": "^1.9.4",
     "material-icons": "^1.13.12",
     "nodemailer": "^6.9.11",
-    "nodemailer-base64-to-s3": "^4.0.1",
+    "nodemailer-base64-to-s3": "^3.0.2",
     "vue": "^3.0.4",
     "vue-leaflet": "^0.1.0",
-    "vue-meta": "^3.0.0-alpha.2",
     "vue-router": "^4.3.0",
     "vue2-google-maps": "^0.10.7",
     "vue3-carousel": "^0.3.1"

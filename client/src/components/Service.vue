@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import { database } from "../data/database";
-import { useMeta } from "vue-meta";
+
 const data = ref([]);
 
 const fetchData = () => {
@@ -14,13 +14,8 @@ const fetchData = () => {
 onMounted(() => {
   fetchData();
 });
-
-useMeta(() => {
-  return {
-    title: route.params.title || "Our services",
-  };
-});
 </script>
+
 <template>
   <div class="service">
     <div class="service-desc">
