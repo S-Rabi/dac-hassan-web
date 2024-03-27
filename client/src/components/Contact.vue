@@ -72,7 +72,7 @@ onMounted(() => {
 
   L.marker([-37.98707, 145.20252])
     .addTo(map)
-    .bindPopup("Hello, this is a marker!");
+    .bindPopup("Dandenong Automotive Centre");
 });
 </script>
 <template>

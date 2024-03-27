@@ -47,9 +47,8 @@ onMounted(() => {
         <div class="text">
           <h3>DAC</h3>
           <p>
-            DAC Panel Service performs panel beating and smash repairs to bring
-            cars back to pre-accident condition. Visit one of our Victorian
-            locations.
+            DAC offers expert bumper repairs, dent removals, panel beating, and
+            more, ensuring your vehicle receives top-notch care and restoration.
           </p>
         </div>
         <div class="text">
