@@ -7,14 +7,15 @@
         <h2 class="a-title">About Dandenong automotive centre</h2>
         <p>Who we are, what our skills and how do we work?</p>
         <p>
-          Fast Panels was established in 2015 with the goal of providing quality
-          and convenient body work repairs at an affordable price. We started
-          out with just one small ute servicing the western suburbs and have now
-          grown to a fleet of vans servicing all of Melbourne and beyond. We are
-          a family owned and run business and treat each customer and employee
-          like family too. We look after everyone we come into contact as best
-          as we can. We are constantly upgrading our equipment and materials to
-          provide the best possible service to our valued customers.
+          DAC Automotive Centre, originally established in 2001, is dedicated to
+          offering top-quality and convenient bodywork repairs at competitive
+          prices. Originating with just one small ute servicing the western
+          suburbs, we have since established ourselves as a premier destination
+          for automotive services in Melbourne and beyond. As a family-owned and
+          operated business, we treat every customer and employee like family,
+          prioritizing their care and satisfaction. We strive to provide the
+          best service possible by continually upgrading our equipment and
+          materials to meet the needs of our valued customers.
         </p>
       </div>
       <img src="../assets/ser.jpg" alt="" class="about-img" />
@@ -24,13 +25,14 @@
       <div class="about-text">
         <h2 class="a-title">Dandenong automotive centre</h2>
         <p>
-          This allows us to repair and service many different types of makes and
-          models. For your convenience, we offer to drop off and pick-up service
-          within our local area. We service fleets of all sizes. We can
-          personalize a package to fit your needs, which saves you time and
-          money. If you choose to wait for your car at our shop, feel free to
-          relax in our comfortable waiting area that includes a TV as well as
-          tea and coffee facilities.
+          This enables us to expertly repair and service a wide array of makes
+          and models. To enhance your convenience, we extend a drop-off and
+          pick-up service within our local vicinity. Catering to fleets of all
+          scales, we're adept at tailoring packages to suit your precise
+          requirements, ensuring optimal time and cost savings. Should you opt
+          to wait for your vehicle at our facility, indulge in relaxation within
+          our inviting waiting area, complete with a television and
+          complimentary tea and coffee amenities.
         </p>
       </div>
     </div>
@@ -41,11 +43,11 @@
       </div>
       <div class="r-cont">
         <div class="r-text">
-          <h2>30+</h2>
+          <h2>20+</h2>
           <p>Years of Experience</p>
         </div>
         <div class="r-text">
-          <h2>9000 +</h2>
+          <h2>5000 +</h2>
           <p>Repaired Successfully</p>
         </div>
         <div class="r-text">
