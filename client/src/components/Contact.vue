@@ -9,19 +9,43 @@ const emailData = ref({
   to: "dac.au@yahoo.com",
   subject: "",
   text: "",
+  name: "",
+  phone: "",
   attachments: [],
 });
 
 const selectedFiles = ref([]);
+const clearInputs = () => {
+  emailData.value.text = "";
+
+  const formInputs = emailFormRef.value.querySelectorAll("input:not(#message)");
+  formInputs.forEach((input) => {
+    input.value = "";
+  });
+};
 
 const sendEmail = async () => {
+  console.log("Sending email with data:", emailData.value);
+
   if (selectedFiles.value.length > 0) {
     await processFiles();
   }
 
-  performEmailSend();
+  try {
+    const emailBody = `
+      Phone: ${emailData.value.phone}\n
+      Vehicle Details: ${emailData.value.name}\n
+      Message: ${emailData.value.text}
+    `;
 
-  emailFormRef.value.reset();
+    emailData.value.text = emailBody;
+
+    performEmailSend(emailData.value);
+  } catch (error) {
+    console.error("Error sending email:", error);
+  }
+
+  clearInputs();
 };
 
 const processFiles = async () => {
@@ -53,6 +77,8 @@ const performEmailSend = async () => {
     console.log("response data =>", response.data);
     emailData.value.subject = "";
     emailData.value.text = "";
+    emailData.value.phone = "";
+    emailData.value.name = "";
     emailData.value.attachments = [];
   } catch (error) {
     console.error("Error sending email:", error.response.data);
@@ -90,7 +116,8 @@ onMounted(() => {
     <div class="c-us">
       <div class="message" id="email">
         <form ref="emailFormRef" @submit.prevent="sendEmail" class="form">
-          <label for="subject">Subject:</label>
+          <h2>Get a Free Quote</h2>
+          <label for="subject">Name:</label>
           <input
             type="text"
             id="subject"
@@ -98,11 +125,32 @@ onMounted(() => {
             required
             class="subject"
           />
-          <label for="message">Message:</label>
-          <textarea id="message" v-model="emailData.text" required></textarea>
-          <label for="file">Choose File:</label>
+          <label for="phone">Phone:</label>
+          <input
+            type="text"
+            id="phone"
+            v-model="emailData.phone"
+            class="subject"
+            required
+          />
+          <label for="name">Vehicl Details:</label>
+          <input
+            type="text"
+            id="name"
+            v-model="emailData.name"
+            class="subject"
+            required
+          />
+          <label for="message"> Any further car needs?</label>
+          <textarea
+            id="message"
+            v-model="emailData.text"
+            placeholder="message"
+            required
+          ></textarea>
+          <label for="file">Upload photos:</label>
           <input type="file" id="file" @change="handleFileChange" multiple />
-          <button type="submit">Send Email</button>
+          <button type="submit">SUBMIT</button>
         </form>
       </div>
       <div class="map" id="map"></div>
@@ -113,7 +161,7 @@ onMounted(() => {
 <style scoped>
 .c-text {
   width: 100%;
-  height: 40vh;
+  height: 35vh;
   position: relative;
 }
 
@@ -133,7 +181,7 @@ onMounted(() => {
   z-index: -1;
 }
 .c-us {
-  height: 50vh;
+  height: 520px;
   border: none;
   display: flex;
   width: 95%;
@@ -157,12 +205,16 @@ onMounted(() => {
   height: 100%;
   padding: 20px;
   background: #153447;
-  gap: 10px;
-  padding: 30px 20px;
+  gap: 5px;
   color: white;
+  overflow: hidden;
 }
 input {
-  padding: 8px;
+  padding: 6px;
+}
+label {
+  font-size: 14px;
+  margin-top: 4px;
 }
 textarea:focus,
 .subject:focus {
@@ -171,16 +223,16 @@ textarea:focus,
 }
 textarea {
   padding: 5px;
-  height: 150px;
+  height: 100px;
 }
 button {
-  padding: 10px;
+  padding: 9px;
   background: #84bd3a;
   color: white;
   border: none;
   border-radius: 2px;
   cursor: pointer;
-  width: 120px;
+  width: 100px;
   font-weight: 500;
   outline: 1px solid white;
 }

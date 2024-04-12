@@ -48,11 +48,13 @@ app.post("/sendEmail", async (req, res) => {
   try {
     const attachments = req.body.attachments || [];
 
+    const emailBody = `Phone: ${req.body.phone}\nName: ${req.body.name}\nMessage: ${req.body.text}`;
+
     const mailOptions = {
-      from: `"Rabi" <${process.env.USER}>`,
+      from: `"DAC" <${process.env.USER}>`,
       to: req.body.to,
       subject: req.body.subject,
-      text: req.body.text,
+      text: emailBody,
       html: req.body.html,
       attachments: attachments.map((attachment) => ({
         ...attachment,
