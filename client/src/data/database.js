@@ -12,8 +12,7 @@ export const database = [
     title: "Panel Beaters",
     details:
       "Looking for a quality panel beater in Dandenong? Look no further than the team at DAC Automotive Centre. We have been providing high-quality, professional smash repair services to the community for over 25 years, and our experienced team can restore your vehicle to its pristine condition. No matter what type of damage your vehicle has sustained, we can help. We offer a range of smash repair services, including bumper repairs, panel beating, paintless dent removal and more.",
-    imgUrl:
-      "https://scontent.fcgk2-1.fna.fbcdn.net/v/t1.6435-9/118534582_2829065327330109_7285374895621090591_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ls5AvuQ8tI0AX9JkN4D&_nc_ht=scontent.fcgk2-1.fna&oh=00_AfCRBt5ImB8MdOMngkyBEyEfgV8pPp8aSMmolu8-nWVHSQ&oe=662B17C7",
+    imgUrl: "https://piercebodyworks.com.au/wp-content/uploads/2016/12/6.jpg",
   },
   {
     id: 3,
